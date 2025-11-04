@@ -8,7 +8,7 @@ body {
 }
 
 nav {
-  background: #1F2937;
+  background: #60A5FA;
   padding: 15px 40px;
   font-size: 25px;
   color: white;
@@ -34,9 +34,10 @@ nav a {
 }
 
 nav a:hover {
-
   
-  text-shadow:  0 2px 3px #60A5FA;
+  font-size: 30px;     
+  transition: all 0.3s ease;  
+ 
 
 }
 
@@ -50,7 +51,7 @@ nav a:hover {
 
 
 #Home {
-  background: url("../img/img_5.jpg") no-repeat center center fixed;
+  background: url("../img/img_6.png") no-repeat center center fixed;
   background-size: cover;
   height: 100vh;
   color: white;
@@ -61,9 +62,20 @@ nav a:hover {
   text-shadow: 2px 2px 4px black;
 }
 
+
+#Home div {
+  background-color:  rgba(31, 41, 55, 0.8);;
+  backdrop-filter: blur(2px);
+  width:  100 px;
+  height: 100 px;
+  place-items: center;
+  padding: 60px 60px;
+  border-radius: 20px;
+}
 #Home h1 {
   font-size: 60px;
   margin-bottom: 15px;
+  
 }
 
 #Home p {
@@ -71,15 +83,67 @@ nav a:hover {
   max-width: 700px;
 }
 
-
+/* ABOUT US */
 #about_us {
   background: #1F2937;
   color: white;
   padding: 100px 20px;
 }
 
-#eventos {
+#about_us {
+  background: #1F2937;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+#about_us h2 {
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+#about_us .container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; 
+  gap: 30px;
+}
+
+
+#about_us .card {
   background: #60A5FA;
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: transform 0.2s;
+}
+
+#about_us .card:hover {
+  transform: scale(1.05);
+}
+
+#about_us .card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+
+#about_us .card h3 {
+  margin: 10px 0 5px;
+}
+
+#about_us .card p {
+  font-size: 16px;
+  margin: 0;
+}
+
+
+
+
+#eventos {
+  background: #f8fafc;
   color: white;
   padding: 100px 20px;
 }
