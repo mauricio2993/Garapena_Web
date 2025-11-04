@@ -7,11 +7,10 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-/* NAVBAR */
 nav {
   background: #1F2937;
   padding: 15px 40px;
-  font-size: 20px;
+  font-size: 25px;
   color: white;
   position: fixed;
   top: 0;
@@ -35,18 +34,21 @@ nav a {
 }
 
 nav a:hover {
-  color: #60A5FA;
+
+  
+  text-shadow:  0ch 3px 4px #60A5FA;
+
 }
 
-/* SECCIONES */
+
 .seccion {
   text-align: center;
   min-height: 100vh;
-  padding-top: 100px; /* espacio para el nav fijo */
+  padding-top: 100px; 
   box-sizing: border-box;
 }
 
-/* HOME - imagen de fondo completa */
+
 #Home {
   background: url("../img/img_5.jpg") no-repeat center center fixed;
   background-size: cover;
@@ -69,9 +71,9 @@ nav a:hover {
   max-width: 700px;
 }
 
-/* Otras secciones */
+
 #about_us {
-  background: #2563EB;
+  background: #1F2937;
   color: white;
   padding: 100px 20px;
 }
