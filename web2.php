@@ -5,20 +5,23 @@
 $servername = "localhost";
 $username   = "root";
 $password   = "";
-$dbname     = "inscripcion";
+$dbname     = "informacion";
 
 // Recoger dato del formulario, podría ser un get ($_GET)
-if (isset($_POST["nombre"])&& isset($_POST["apellido"])&& isset($_POST["correo"])&& isset($_POST["telefono"])) {
+if (isset($_POST["nombre"])&& isset($_POST["apellido"])&& isset($_POST["correo"])&& isset($_POST["telefono"])&& isset($_POST["asunto"])) {
     $nombre = $_POST["nombre"];
 	$apellido = $_POST["apellido"];
-    $correo = $_POST["correo"];
+    $email = $_POST["correo"];
     $telefono = $_POST["telefono"];
+    $asunto = $_POST["asunto"];
+    
 
 } else {
     $nombre = "";
 	$apellido = "";
-    $correo = "";
+    $email = "";
     $telefono = "";
+    $asunto = "";
 }
 
 
@@ -34,21 +37,22 @@ if ($conn->connect_error) {
 }
 
 // Evitar insertar vacío
-if ($nombre === "" || $apellido === "" || $correo === "" || $telefono === "" ) {
+if ($nombre === "" || $apellido === "" || $email === "" || $telefono === "" || $asunto === "" ) {
     // Finaliza la ejecución del script y muestra el mensaje indicado al usuario
 	die("El nombre/apellido no puede estar vacío");
 }
 
 // Consulta SQL para insertar
-$sql = "INSERT INTO inscripciones (nombre, apellido, correo, telefono) VALUES ('$nombre', '$apellido' ,'$correo' ,'$telefono')";
+$sql = "INSERT INTO inscripciones (nombre, apellido, email, telefono, asunto) VALUES ('$nombre', '$apellido' ,'$email' ,'$telefono' ,'$asunto')";
 
 // Ejecutar
 if ($conn->query($sql) === TRUE) {
     echo "<h2>¡Registro correcto!</h2>";
     echo "<p>Nombre insertado: " . $nombre . "</p>";
 	echo "<p>Apellido insertado: " . $apellido . "</p>";
-    echo "<p>Correo insertado: " . $correo . "</p>";
+    echo "<p>Email insertado: " . $email . "</p>";
     echo "<p>Telefono insertado: " . $telefono . "</p>";
+    echo "<p>Asunto insertado: " . $asunto . "</p>";
     echo '<p><a href="javascript:history.back()">Volver</a></p>';
 } else {
     echo "Error: " . $conn->error;
