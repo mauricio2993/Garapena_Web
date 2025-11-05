@@ -42,8 +42,10 @@ nav a {
 
 nav a:hover {
   
-  font-size: 30px;     
-  transition: all 0.3s ease;  
+      
+  transition: all 0.4s ease;
+  border-bottom: #f8fafc 3px solid;
+  padding-bottom: 6px;  
  
 
 }
@@ -144,6 +146,16 @@ nav a:hover {
   font-size: 16px;
   margin: 0;
 }
+#about_us .card .linkedin {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  border-left: 2px solid white;
+  padding: 10px;
+}
 
 
 /*eventos*/
@@ -153,7 +165,7 @@ nav a:hover {
   color: white;
   padding: 100px 20px;
 }
-/* EVENTOS */
+
 #eventos {
   background: #f8fafc;
   color: #111827;
@@ -167,7 +179,6 @@ nav a:hover {
   margin-bottom: 50px;
 }
 
-/* Contenedor de las tarjetas */
 .contenedor-eventos {
   display: flex;
   justify-content: center;
@@ -175,7 +186,7 @@ nav a:hover {
   gap: 30px;
 }
 
-/* Tarjeta individual */
+
 .evento {
   background: white;
   border-radius: 10px;
@@ -189,7 +200,6 @@ nav a:hover {
   transform: scale(1.05);
 }
 
-/* Imagen */
 .evento img {
   width: 100%;
   height: 180px;
@@ -197,7 +207,7 @@ nav a:hover {
   border-radius: 10px 10px 0 0;
 }
 
-/* Texto */
+
 .evento h3 {
   color: #1e3a8a;
   margin: 15px 0 10px;
@@ -219,14 +229,15 @@ nav a:hover {
   padding: 10px 25px;
   border-radius: 10px;
   font-weight: bold;
-  transition: background 0.3s;
+  transition:  0.3s;
+  font-size: 20px;
 }
 
 .boton:hover {
   background: #2563eb;
-}
 
-/* Adaptable en móvil */
+}
+/* responsive */
 @media (max-width: 768px) {
   .contenedor-eventos {
     flex-direction: column;
