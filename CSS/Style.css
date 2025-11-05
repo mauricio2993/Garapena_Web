@@ -2,9 +2,16 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
+html, body {
+  padding: 0;
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  height: 100%;
+  width: 100%;
+  font-size:10px;
+  text-decoration:none;   
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-style: normal;
 }
 
 nav {
@@ -23,7 +30,7 @@ nav {
 }
 
 #logo {
-  height: 50px;
+  height: 60px;
   width: auto;
 }
 
@@ -90,12 +97,6 @@ nav a:hover {
   padding: 100px 20px;
 }
 
-#about_us {
-  background: #1F2937;
-  color: white;
-  padding: 100px 20px;
-  text-align: center;
-}
 
 #about_us h2 {
   font-size: 40px;
@@ -125,12 +126,17 @@ nav a:hover {
 
 #about_us .card img {
   width: 100%;
+  height: 280px;            
+  object-fit: cover;      
+  object-position: center;  
   border-radius: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
+  
 }
 
 
 #about_us .card h3 {
+  font-size: 20px;
   margin: 10px 0 5px;
 }
 
@@ -140,16 +146,128 @@ nav a:hover {
 }
 
 
-
+/*eventos*/
 
 #eventos {
   background: #f8fafc;
   color: white;
   padding: 100px 20px;
 }
+/* EVENTOS */
+#eventos {
+  background: #f8fafc;
+  color: #111827;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+#eventos h2 {
+  font-size: 40px;
+  color: #2563eb;
+  margin-bottom: 50px;
+}
+
+/* Contenedor de las tarjetas */
+.contenedor-eventos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* Tarjeta individual */
+.evento {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  width: 250px;
+  padding-bottom: 20px;
+  transition: transform 0.2s;
+}
+
+.evento:hover {
+  transform: scale(1.05);
+}
+
+/* Imagen */
+.evento img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+/* Texto */
+.evento h3 {
+  color: #1e3a8a;
+  margin: 15px 0 10px;
+  font-size: 20px;
+}
+
+.evento p {
+  font-size: 16px;
+  color: #374151;
+  padding: 0 15px;
+  margin-bottom: 20px;
+}
+
+/* Botón */
+.boton {
+  background: #60a5fa;
+  color: white;
+  text-decoration: none;
+  padding: 10px 25px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.boton:hover {
+  background: #2563eb;
+}
+
+/* Adaptable en móvil */
+@media (max-width: 768px) {
+  .contenedor-eventos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .evento {
+    width: 80%;
+  }
+}
+
+
+
+/* CONTACTO */
 
 #contacto {
-  background: #656668;
+  background: #1F2937;
   color: white;
-  padding: 100px 20px;
+  padding: 80px 20px;
+  text-align: center;
 }
+
+#contacto h2 {
+  font-size: 40px;
+  color: #60A5FA;
+  margin-bottom: 30px;
+}
+
+#contacto p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+#contacto a {
+  color: #60A5FA;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+#contacto a:hover {
+  color: #93C5FD;
+  text-decoration: underline;
+}
+
