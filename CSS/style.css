@@ -15,7 +15,7 @@ html, body {
 }
 
 nav {
-  background: #60A5FA;
+  background: linear-gradient(135deg, #1E3A8A, #0F172A);
   padding: 15px 40px;
   font-size: 25px;
   color: white;
@@ -282,3 +282,31 @@ nav a:hover {
   text-decoration: underline;
 }
 
+
+footer {
+  background: linear-gradient(135deg, #1E3A8A, #0F172A);
+  color: #E5E7EB;
+  text-align: center;
+  padding: 4rem 2rem;           
+  font-size: 1.5rem;           
+  letter-spacing: 0.6px;
+  line-height: 2;               
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.footer-container {
+  max-width: 2000px;
+  margin: 0 auto;
+}
+
+.footer-info p {
+  margin: 25px 0;
+}
+
+.footer-info a {
+  color: #60A5FA;
+  text-decoration: none;
+  font-weight: 850;            
+  font-size: 1.7rem;           
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}

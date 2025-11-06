@@ -3,14 +3,15 @@
 $servername = "localhost";
 $username   = "root";
 $password   = "";
-$dbname     = "informacion";
+$dbname     = "garapena_db";
 
-if (isset($_POST["nombre"])&& isset($_POST["apellido"])&& isset($_POST["correo"])&& isset($_POST["telefono"])&& isset($_POST["asunto"])) {
+if (isset($_POST["nombre"])&& isset($_POST["apellido"])&& isset($_POST["email"])&& isset($_POST["telefono"])&& isset($_POST["asunto"])&& isset($_POST["evento"])) {
     $nombre = $_POST["nombre"];
 	$apellido = $_POST["apellido"];
-    $email = $_POST["correo"];
+    $email = $_POST["email"];
     $telefono = $_POST["telefono"];
     $asunto = $_POST["asunto"];
+    $evento = $_POST["evento"];
     
 
 } else {
@@ -19,6 +20,7 @@ if (isset($_POST["nombre"])&& isset($_POST["apellido"])&& isset($_POST["correo"]
     $email = "";
     $telefono = "";
     $asunto = "";
+    $evento= "";
 }
 
 
@@ -32,12 +34,12 @@ if ($conn->connect_error) {
 	die("Error de conexión: " . $conn->connect_error);
 }
 
-if ($nombre === "" || $apellido === "" || $email === "" || $telefono === "" || $asunto === "" ) {
+if ($nombre === "" || $apellido === "" || $email === "" || $telefono === "" || $asunto === "" || $evento === "" ) {
     // Finaliza la ejecución del script y muestra el mensaje indicado al usuario
 	die("El nombre/apellido no puede estar vacío");
 }
 
-$sql = "INSERT INTO inscripciones (nombre, apellido, email, telefono, asunto) VALUES ('$nombre', '$apellido' ,'$email' ,'$telefono' ,'$asunto')";
+$sql = "INSERT INTO inscripciones (nombre, apellido, email, telefono, asunto, evento) VALUES ('$nombre', '$apellido' ,'$email' ,'$telefono' ,'$asunto','$evento')";
 
 // Ejecutar
 if ($conn->query($sql) === TRUE) {
@@ -47,6 +49,7 @@ if ($conn->query($sql) === TRUE) {
     echo "<p>Email insertado: " . $email . "</p>";
     echo "<p>Telefono insertado: " . $telefono . "</p>";
     echo "<p>Asunto insertado: " . $asunto . "</p>";
+    echo "<p>evento insertado: " . $evento . "</p>";
     echo '<p><a href="javascript:history.back()">Volver</a></p>';
 } else {
     echo "Error: " . $conn->error;
