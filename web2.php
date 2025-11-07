@@ -29,19 +29,18 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 
 
 if ($conn->connect_error) {
-    // Finaliza la ejecución del script y muestra el mensaje indicado al usuario
-	// PHP cierra la conexión al finalizar el script, $conn se destruye automáticamente
+  
 	die("Error de conexión: " . $conn->connect_error);
 }
 
 if ($nombre === "" || $apellido === "" || $email === "" || $telefono === "" || $asunto === "" || $evento === "" ) {
-    // Finaliza la ejecución del script y muestra el mensaje indicado al usuario
+   
 	die("El nombre/apellido no puede estar vacío");
 }
 
 $sql = "INSERT INTO inscripciones (nombre, apellido, email, telefono, asunto, evento) VALUES ('$nombre', '$apellido' ,'$email' ,'$telefono' ,'$asunto','$evento')";
 
-// Ejecutar
+
 if ($conn->query($sql) === TRUE) {
     echo "<h2>¡Registro correcto!</h2>";
     echo "<p>Nombre insertado: " . $nombre . "</p>";
